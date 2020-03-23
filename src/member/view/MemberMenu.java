@@ -23,15 +23,15 @@ public class MemberMenu {
 			System.out.println("==============================");
 			System.out.print("메뉴 번호를 입력하세요. : ");
 			int btn = sc.nextInt();
+			sc.nextLine();
 			
 			switch(btn) {
-			case 1 : 
-			case 2 : 
-			case 3 : 
+			case 1 : new MemberManager().insertMember(); break;
+			case 2 : searchMemberMenu(); break;
+			case 3 : updateMemberMenu(); break;
 			case 4 : 
 			case 5 : 
-			case 9 : 
-			default : System.out.println("프로그램을 종료합니다."); return;
+			case 9 : System.out.println("프로그램을 종료합니다."); return;
 			}
 		} while(true);
 	}
@@ -48,11 +48,10 @@ public class MemberMenu {
 			int btn = sc.nextInt();
 			
 			switch(btn) {
-			case 1 : 
-			case 2 : 
-			case 3 : 
-			case 9 : 
-			default : System.out.println("메인메뉴로 이동합니다."); return;
+			case 1 : new MemberManager().searchId(); break;
+			case 2 : new MemberManager().searchName(); break;
+			case 3 : new MemberManager().searchEmail(); break;
+			case 9 : System.out.println("메인메뉴로 이동합니다."); return;
 			}
 		} while(true);
 	}
@@ -69,7 +68,7 @@ public class MemberMenu {
 			int btn = sc.nextInt();
 			
 			switch(btn) {
-			case 1 : 
+			case 1 : new MemberManager().updatePwd(); break;
 			case 2 : 
 			case 3 : 
 			case 9 : 
