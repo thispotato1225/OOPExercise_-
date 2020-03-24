@@ -69,10 +69,9 @@ public class MemberMenu {
 			
 			switch(btn) {
 			case 1 : new MemberManager().updatePwd(); break;
-			case 2 : 
-			case 3 : 
-			case 9 : 
-			default : System.out.println("메인메뉴로 이동합니다."); return;
+			case 2 : new MemberManager().updateName(); break;
+			case 3 : new MemberManager().updateEmail(); break;
+			case 9 : System.out.println("메인메뉴로 이동합니다."); return;
 			}
 		} while(true);
 	}
@@ -88,7 +87,7 @@ public class MemberMenu {
 			int btn = sc.nextInt();
 			
 			switch(btn) {
-			case 1 : 
+			case 1 : new MemberManager().deleteOne(); break;
 			case 2 : 
 			case 9 : 
 			default : System.out.println("메인메뉴로 이동합니다."); return;
