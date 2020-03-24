@@ -146,6 +146,30 @@ public class MemberManager {
 		System.out.println("삭제할 회원 정보가 존재하지 않습니다.");
 	}
 	
+	public void deleteAll() {
+		for(int i = 0; i < ctn; i++) {
+			m[i].setUserId(null);
+			m[i].setUserPwd(null);
+			m[i].setUserName(null);
+			m[i].setAge(0);
+			m[i].setGender('\u0000');
+			m[i].setEmail(null);
+		}
+		ctn = 0;
+		System.out.println("전체 회원 정보 삭제가 완료되었습니다.");
+	}
+	
+	public void printAllMember() {
+		for(int i = 0; i < ctn; i++) {
+			System.out.println("아이디 : " + m[i].getUserId());
+			System.out.println("패스워드 : " + m[i].getUserPwd());
+			System.out.println("이름 : " + m[i].getUserName());
+			System.out.println("나이 : " + m[i].getAge());
+			System.out.println("성별 : " + m[i].getGender());
+			System.out.println("이메일 : " + m[i].getEmail());
+		}
+	}
+	
 	public void printOne(Member m) {
 		System.out.println("아이디 : " + m.getUserId());
 		System.out.println("패스워드 : " + m.getUserPwd());

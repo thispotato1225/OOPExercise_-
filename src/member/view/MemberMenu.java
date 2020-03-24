@@ -29,8 +29,8 @@ public class MemberMenu {
 			case 1 : new MemberManager().insertMember(); break;
 			case 2 : searchMemberMenu(); break;
 			case 3 : updateMemberMenu(); break;
-			case 4 : 
-			case 5 : 
+			case 4 : deleteMemberMenu(); break;
+			case 5 : new MemberManager().printAllMember(); break;
 			case 9 : System.out.println("프로그램을 종료합니다."); return;
 			}
 		} while(true);
@@ -88,9 +88,8 @@ public class MemberMenu {
 			
 			switch(btn) {
 			case 1 : new MemberManager().deleteOne(); break;
-			case 2 : 
-			case 9 : 
-			default : System.out.println("메인메뉴로 이동합니다."); return;
+			case 2 : new MemberManager().deleteAll(); break;
+			case 9 : System.out.println("메인메뉴로 이동합니다."); return;
 			}
 		} while(true);
 	}
